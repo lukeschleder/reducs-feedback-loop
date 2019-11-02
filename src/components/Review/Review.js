@@ -10,9 +10,6 @@ class Review extends Component {
       console.log('Adding feedback', this.props.formReducer);
       axios.post('/feedback', this.props.formReducer,  )
         console.log('after post');
-        alert("Your feedback is appreciated");
-        
-        
     }
         
 
@@ -27,8 +24,8 @@ class Review extends Component {
                             <li>Support: {this.props.formReducer.support}</li>
                             <li>Comments: {this.props.formReducer.comments}</li>
                         </ul>
-                        <button onClick={this.handleSubmit} >Submit</button>
-                        <Link to="/">Next</Link>
+                        <Link to="/submissionsuccess"><button onClick={this.handleSubmit} >Submit</button></Link>
+                        
                     </header>
                     <br />
                 </div>

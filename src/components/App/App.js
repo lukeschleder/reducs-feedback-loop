@@ -8,6 +8,7 @@ import Home from '../Home/Home';
 import Form from '../Form/Form';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import SubmissionSuccess from '../SubmissionSuccess/SubmissionSuccess';
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/supported" render={()=> <Form type= "SUPPORTED_INFORMATION" question= "How well are you being supported?" route= "/comments"/>}/>
           <Route path="/comments" exact component={Comments}/>
           <Route path="/review" exact component={Review} />
+          <Route path="/submissionsuccess" exact component={SubmissionSuccess} />
           <pre>{JSON.stringify(this.props.formReducer, null, 2)}</pre>
         </div>
       </Router>
