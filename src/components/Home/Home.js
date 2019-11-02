@@ -10,7 +10,7 @@ class Home extends Component {
                     <header className="Home-header">
                         <h1 className="Home-title">Home</h1>
                         <p>Thank you for being a part of this Academy!  Please submit your feedback on the next page.</p>
-                        <Link to="/feeling">Next</Link>
+                        <Link to="/feeling">Begin Feedback</Link>
                     </header>
                     <br />
                 </div>
