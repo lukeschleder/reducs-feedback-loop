@@ -22,6 +22,7 @@ class Comments extends Component {
     
     compileFeedback = () => {
         this.props.dispatch({ type: "COMMENT_INFORMATION", payload: this.state.input });
+        console.log(this.props);
         this. props.history.push('/review');
     }
 
@@ -33,9 +34,9 @@ class Comments extends Component {
                         <form onSubmit={this.compileFeedback}>
                         <input type="text" onChange={this.inputChangeHandler}></input>
                         
-                        <button type= "submit">Next</button>
+                        <button onClick={this.compileFeedback} type= "submit">Next</button>
                         </form>
-                        {JSON.stringify(this.state, null, 2)}
+                        
                     </header>
                     <br />
                 </div>
