@@ -17,9 +17,11 @@ const formReducer = (state = {}, action) => {
     } else if (action.type === "UNDERSTANDING_INFORMATION"){
         return {...state, understanding: action.payload};
     } else if (action.type === "SUPPORTED_INFORMATION"){
-        return {...state, support: action.payload, };
+        return {...state, support: action.payload };
     } else if (action.type === "COMMENT_INFORMATION"){
         return {...state, comments: action.payload};
+    } else if (action.type === "CLEAR_FEEDBACK"){
+        return {};
     }
     return state;
  }
