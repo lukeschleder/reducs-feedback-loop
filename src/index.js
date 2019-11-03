@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 
 const formReducer = (state = {}, action) => {
     console.log("state",state);
-    console.log("payload",action.payload);
+
     var today = new Date();
     
     if(action.type === "FEELING_INFORMATION"){

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link, withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 
 
@@ -32,9 +32,12 @@ class Comments extends Component {
                     <header className="Comments-header">
                         <h1 className="Comments-Title">Comments</h1>
                         <form onSubmit={this.compileFeedback}>
-                        <input type="text" onChange={this.inputChangeHandler}></input>
+                        {/* <input id="commentInput"type="text" onChange={this.inputChangeHandler}></input> */}
+                        <textarea id="commentInput"type="text" 
+                        onChange={this.inputChangeHandler} name="message" rows="5" cols="30" 
+                        placeholder="Say a few words about how your day went."></textarea>
                         
-                        <button onClick={this.compileFeedback} type= "submit">Next</button>
+                        <Button variant="contained"onClick={this.compileFeedback} type= "submit">Next</Button>
                         </form>
                         
                     </header>

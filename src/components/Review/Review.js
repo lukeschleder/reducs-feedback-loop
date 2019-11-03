@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link, withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 class Review extends Component {
 
@@ -24,8 +26,8 @@ class Review extends Component {
                             <li>Support: {this.props.formReducer.support}</li>
                             <li>Comments: {this.props.formReducer.comments}</li>
                         </ul>
-                        <Link to="/submissionsuccess"><button onClick={this.handleSubmit} >Submit</button></Link>
-                        
+                        <Link to="/submissionsuccess"><Button variant="contained"color="primary"startIcon={<CloudUploadIcon />}onClick={this.handleSubmit} >Submit</Button></Link>
+                       
                     </header>
                     <br />
                 </div>
