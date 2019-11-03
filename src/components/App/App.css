@@ -21,5 +21,9 @@
   text-decoration: none;
 }
 
+#reviewList {
+   list-style-type:none;
+}
+
 
 
