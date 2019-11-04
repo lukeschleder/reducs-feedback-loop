@@ -12,7 +12,7 @@ import Select from '@material-ui/core/Select';
 class Form extends Component {
 
     state = {
-        input: '',
+        input: 0,
     }
 
 
@@ -38,7 +38,7 @@ class Form extends Component {
                 <header className="Home-header">
                     <h1 className="Feeling-title">{this.props.question}</h1>
                     <FormControl>
-                        <Select onChange={this.inputChangeHandler}>
+                        <Select value ={this.state.input} onChange={this.inputChangeHandler}>
                             <MenuItem value={1}>1 not well</MenuItem>
                             <MenuItem value={2}>2</MenuItem>
                             <MenuItem value={3}>3 average</MenuItem>

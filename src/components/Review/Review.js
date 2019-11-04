@@ -8,8 +8,10 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 class Review extends Component {
 
     handleSubmit = () => {
+        if (this.props.formReducer.feeling === undefined || this.props.formReducer.understanding === undefined || this.props.formReducer.support === undefined){
+        alert("Please fill out form completely")
         console.log('Adding feedback', this.props.formReducer);
-        axios.post('/feedback', this.props.formReducer)
+         } else axios.post('/feedback', this.props.formReducer)
         this.props.dispatch({ type: "CLEAR_FEEDBACK" });
         // this.props.history.push('/submissionsuccess');   
     }

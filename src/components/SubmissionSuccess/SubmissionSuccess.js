@@ -9,7 +9,7 @@ class SubmissionSuccess extends Component {
         return (
             <div className="Review">
                 <header className="Home-header">
-                    <h1 className="Review-Title">Your submittion has been successful.</h1>
+                    <h1 className="Review-Title">Your submission has been successful.</h1>
                     <Link to="/"><Button variant="contained">Leave New Feedback</Button></Link>
                 </header>
                 <br />

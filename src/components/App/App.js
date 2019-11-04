@@ -24,6 +24,21 @@ class App extends Component {
               <li>
                 <Link to="/">Home</Link>
               </li>
+              <li>
+                <Link to="/feeling">Feeling</Link>
+              </li>
+              <li>
+                <Link to="/understanding">Understanding</Link>
+              </li>
+              <li>
+                <Link to="/supported">Support</Link>
+              </li>
+              <li>
+                <Link to="/comments">Comments</Link>
+              </li>
+              <li>
+                <Link to="/review">Review</Link>
+              </li>
             </ul>
           </div>
           <br />

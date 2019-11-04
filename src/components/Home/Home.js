@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Route, Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 class Home extends Component {
