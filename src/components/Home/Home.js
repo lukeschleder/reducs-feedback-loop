@@ -9,8 +9,7 @@ class Home extends Component {
             <div className="App">
                 <header className="Home-header">
                     <h1 className="Home-title">Daily Feedback</h1>
-                    <p>Please submit your feedback on the next page understanding that 1 is anxious and 5 is competent. 
-                        Keep in mind that all scores have a default value of 1.</p>
+                    <p>Please submit your feedback on the next page.</p>
                     <Link to="/feeling"><Button color="primary" variant="contained">Begin Feedback</Button></Link>
                 </header>
             </div>

@@ -7,30 +7,30 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 class Review extends Component {
 
-    handleSubmit = (event) => {
-    //   event.preventDefault();
-      console.log('Adding feedback', this.props.formReducer);
-      axios.post('/feedback', this.props.formReducer,  )
-        console.log('after post');
+    handleSubmit = () => {
+        console.log('Adding feedback', this.props.formReducer);
+        axios.post('/feedback', this.props.formReducer)
+        this.props.dispatch({ type: "CLEAR_FEEDBACK" });
+        // this.props.history.push('/submissionsuccess');   
     }
-        
+
 
     render() {
         return (
-                <div className="Review">
-                    <header className="Home-header">
-                        <h1 className="Review-Title">Review</h1>
-                        <ul id = "reviewList">
-                            <li>Feeling: {this.props.formReducer.feeling}</li>
-                            <li>Understanding: {this.props.formReducer.understanding}</li>
-                            <li>Support: {this.props.formReducer.support}</li>
-                            <li>Comments: {this.props.formReducer.comments}</li>
-                        </ul>
-                        <Link to="/submissionsuccess"><Button variant="contained"color="primary"startIcon={<CloudUploadIcon />}onClick={this.handleSubmit} >Submit</Button></Link>
-                       
-                    </header>
-                    <br />
-                </div>
+            <div className="Review">
+                <header className="Home-header">
+                    <h1 className="Review-Title">Review</h1>
+                    <ul id="reviewList">
+                        <li>Feeling: {this.props.formReducer.feeling}</li>
+                        <li>Understanding: {this.props.formReducer.understanding}</li>
+                        <li>Support: {this.props.formReducer.support}</li>
+                        <li>Comments: {this.props.formReducer.comments}</li>
+                    </ul>
+                    <Link to="/submissionsuccess"> <Button variant="contained" color="primary" startIcon={<CloudUploadIcon />} onClick={this.handleSubmit} >Submit</Button></Link>
+
+                </header>
+                <br />
+            </div>
         );
     }
 }

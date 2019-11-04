@@ -4,9 +4,6 @@ import { HashRouter as Router, Route, Link, withRouter } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
-
-
-
 class Comments extends Component {
 
     state = {
@@ -43,8 +40,8 @@ class Comments extends Component {
                             variant="outlined"
                             placeholder="Say a few words about how your day went."
                         />
-                        <br/>
-                        <Button variant="contained" onClick={this.compileFeedback} type="submit">Next</Button>
+                        <br />
+                        <Button variant="contained" type="submit">Next</Button>
                     </form>
 
                 </header>
